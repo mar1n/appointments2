@@ -5,7 +5,7 @@ import { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme'
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Welcomemsg from '../src/Welcomemsg';
+import Welcomemsg from '../src/render/Welcomemsg';
 
 configure({ adapter: new Adapter() });
 

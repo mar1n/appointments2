@@ -5,17 +5,16 @@ import { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme'
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Checkdetails from '../src/render/Checkdetails';
+import TotalScore from '../src/Totalscore';
 
 configure({ adapter: new Adapter() });
 
 import { shallow, mount, render } from 'enzyme';
 
-describe('Display name and surname', () => {
-    it('Display details', () =>{
-        const Check = shallow(<Checkdetails />);
+describe('Pass props and display', () => {
+    it('TotalScore returns the accumulated score (bad results)', () => {
+        const totalScore = shallow(<TotalScore scores={[34, 35,36]} />);
 
-        expect(Check.find('.name').text()).to.equal('Szymon');
-        expect(Check.find('.surname').text()).to.equal('Dawidowicz');
+        expect(totalScore.text()).to.equal('The total score is: 105');
     })
 })

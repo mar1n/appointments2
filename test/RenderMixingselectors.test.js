@@ -5,7 +5,7 @@ import { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme'
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import BookDetails from '../src/BookDetails';
+import BookDetails from '../src/render/BookDetails';
 
 configure({ adapter: new Adapter() });
 

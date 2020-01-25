@@ -5,7 +5,7 @@ import { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme'
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import PremierLeague from '../src/PremierLeague';
+import PremierLeague from '../src/render/PremierLeague';
 
 configure({ adapter: new Adapter() });
 
