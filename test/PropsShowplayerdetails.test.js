@@ -5,7 +5,7 @@ import { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme'
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Player from '../src/Playerdetails';
+import Player from '../src/props/Playerdetails';
 
 configure({ adapter: new Adapter() });
 
