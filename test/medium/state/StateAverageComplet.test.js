@@ -2,7 +2,7 @@ import React from 'react';
 import { expect } from 'chai';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import AverageScore from '../src/medium/state/AverageScoreComplet';
+import AverageScore from '../../../src/medium/state/AverageScoreComplet';
 
 configure({ adapter: new Adapter() });
 
