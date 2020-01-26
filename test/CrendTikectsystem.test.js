@@ -20,7 +20,7 @@ describe('Conditional rendering', () => {
 
         expect(buyTikets.text()).to.equal('Sorry, try again you turn 18');
     })
-    it('BuyTikets doesn\'t allow the user to proceed the he/she is below 18', () => {
+    it('BuyTikets allows the user to proceed the he/she is below 18', () => {
 
         let user = { name: 'Anthony', age: 21 };
 
