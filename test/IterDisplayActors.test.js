@@ -21,7 +21,7 @@ describe('Display list of elements', () => {
         expect(paragraphs.at(1).text()).to.equal('Silvester');
         expect(paragraphs.at(2).text()).to.equal('Steven');
     });
-    it('Actors displays a list of 3 actors', () => {
+    it('Actors displays a list of 1 actors', () => {
         const actors = shallow(<Actors names={['Leonardo']} />);
         let paragraphs = actors.find('p');
 
