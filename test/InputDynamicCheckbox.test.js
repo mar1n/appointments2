@@ -2,7 +2,7 @@ import React from 'react';
 import { expect } from 'chai';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Checkboxes from '../src/input/Chcekbox';
+import Checkboxes from '../src/basic/input/Chcekbox';
 
 configure({ adapter: new Adapter() });
 

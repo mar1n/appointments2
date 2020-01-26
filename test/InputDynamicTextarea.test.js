@@ -2,7 +2,7 @@ import React from 'react';
 import { expect } from 'chai';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Textarea from '../src/input/Textarea';
+import Textarea from '../src/basic/input/Textarea';
 
 configure({ adapter: new Adapter() });
 
