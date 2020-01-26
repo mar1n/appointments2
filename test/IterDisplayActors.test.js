@@ -5,7 +5,7 @@ import { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme'
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import ClubTickets from '../src/condirendering/ClubTickets';
+import Actors from '../src/iteratinglist/Actors';
 
 configure({ adapter: new Adapter() });
 
@@ -15,5 +15,17 @@ describe('Display list of elements', () => {
     it('Actors displays a list of 3 actors', () => {
         const actors = shallow(<Actors names={['Arnold', 'Silvester', 'Steven']} />);
         let paragraphs = actors.find('p');
-    })
+
+        expect(paragraphs).to.have.length(3);
+        expect(paragraphs.at(0).text()).to.equal('Arnold');
+        expect(paragraphs.at(1).text()).to.equal('Silvester');
+        expect(paragraphs.at(2).text()).to.equal('Steven');
+    });
+    it('Actors displays a list of 3 actors', () => {
+        const actors = shallow(<Actors names={['Leonardo']} />);
+        let paragraphs = actors.find('p');
+
+        expect(paragraphs).to.have.length(1);
+	expect(paragraphs.at(0).text()).to.equal('Leonardo');
+    });
 })
