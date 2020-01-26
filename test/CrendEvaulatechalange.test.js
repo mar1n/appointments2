@@ -1,15 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import chai from 'chai';
 import { expect } from 'chai';
-import chaiEnzyme from 'chai-enzyme'
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import ChallengeResults from '../src/condirendering/ChallengeResults';
 
 configure({ adapter: new Adapter() });
 
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('Conditional rendering', () => {
     it('ChallengeResults displays a "keep traning message when the average results are < 50', () => {

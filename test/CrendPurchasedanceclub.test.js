@@ -1,15 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import chai from 'chai';
 import { expect } from 'chai';
-import chaiEnzyme from 'chai-enzyme'
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import ClubTickets from '../src/condirendering/ClubTickets';
 
 configure({ adapter: new Adapter() });
 
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('Conditional renderning', ()=>{
     it('ClubTikets allows the user to buy tickets when he/she is at least 18 years old', () => {

@@ -1,15 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import chai from 'chai';
 import { expect } from 'chai';
-import chaiEnzyme from 'chai-enzyme'
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Actors from '../src/iteratinglist/ActorsDetails';
 
 configure({ adapter: new Adapter() });
 
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('Display list of elements', () => {
     it('Actors takes 3 actors and display their name and age', () => {

@@ -1,15 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import chai from 'chai';
 import { expect } from 'chai';
-import chaiEnzyme from 'chai-enzyme'
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import PremierLeague from '../src/render/PremierLeague';
 
 configure({ adapter: new Adapter() });
 
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('PremierLeagueFixtures', () => {
     it('display match results', () => {
