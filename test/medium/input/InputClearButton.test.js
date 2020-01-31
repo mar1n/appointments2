@@ -2,7 +2,7 @@ import React from 'react';
 import { expect } from 'chai';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import InputClear from '../../../src/medium/input/InputSalary';
+import InputClear from '../../../src/medium/input/InputClear';
 
 configure({ adapter: new Adapter() });
 
@@ -10,7 +10,7 @@ import { shallow } from 'enzyme';
 
 describe('Button, display, hide, controll, check ', () => {
     it('ResetableInput shows an input and a button to reset it', () => {
-        const wrapper = shallow(<InputButton />);
+        const wrapper = shallow(<InputClear />);
         const getInput = () => wrapper.find('input[type="text"]');
         const getResetButton = () => wrapper.find('button');
 
