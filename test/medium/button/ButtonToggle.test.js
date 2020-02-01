@@ -2,7 +2,7 @@ import React from 'react';
 import { expect } from 'chai';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import PressMe from '../../../src/medium/button/PressMe';
+import DriverDetails from '../../../src/medium/button/DriverDetails';
 
 configure({ adapter: new Adapter() });
 
@@ -24,6 +24,6 @@ describe('Toggle driver details', () => {
 
         getPressMeButton().simulate('click');
 
-        expect(getDetails.exists()).to.equal(false);
+        expect(getDetails().exists()).to.equal(false);
     })
 })
