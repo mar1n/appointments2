@@ -17,5 +17,13 @@ describe('', () => {
 
         expect(getEmail().props().value).to.equal('');
         expect(getMatchMessage().text()).to.equal('Great! Emails match');
-    })
+
+        getEmail().simulate('change', { target: { value: 'a@b.com'}});
+
+        expect(getMatchMessage().text()).to.equal('Oh! Emails do not match!');
+
+        getConfirmEmail().simulate('change', { target: { value: 'a@b.com'}})
+
+        expect(getMatchMessage().text()).to.equal('Great! Emails match');
+    });
 })
